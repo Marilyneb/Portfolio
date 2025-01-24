@@ -26,7 +26,7 @@ const modalData = {
     ],
   },
   project4: {
-    title: "Avocado Render",
+    title: "Avocado RenderMan",
     description: "This project required  simple real-world object had to be chosen, which had to be modeled and rendered in a scene using RenderMan.The object had to be analyzed to determine the characteristics of its surface and to realize them using RIB and OSL.",
     gallery: [
         "<img src='assets/Avocadooo.jpg' alt='Avocado Render 1'>",
@@ -53,7 +53,7 @@ const modalData = {
  
   },
   project7: {
-    title: "Houdini Simulation",
+    title: "Houdini Digital Asset (HDA)",
     description: "The aim of the Houdini project was to create a Houdini Digital Asset (HDA) for generating a garden that can be configured with a user interface.",
     gallery: [
        "<video controls src='assets/Houdini.mov'></video>",
