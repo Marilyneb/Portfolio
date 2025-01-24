@@ -1,0 +1,44 @@
+# This websites has four sections.
+.home /contains header and navbar information.
+.projects /holds all the projects added by the user.
+.sketches /holds all the sketches added by the user.
+.about /information about the author
+## To add new project:
+ -> go to portfolio-grid container under **projects** section in index.html <div class="portfolio-grid">
+ -> add new div section below the last project e.g project6
+ -> follow this format:
+    <div class="portfolio-item" onclick="openModal('project6')">
+        <img src="assets/Fire Simulation 2.jpg" alt="Fire Simulation"></img>
+        <h3>Fire Simulation</h3>
+    </div>
+        -> project6 - is the object name which should be included in the script.js
+        -> you include a video or image to be displayed on the homepage. 
+            e.g  <img src="assets/Fire Simulation 2.jpg" alt="Fire Simulation"></img>
+        ->add the title of the project. e.g <h3>Fire Simulation</h3>
+## To add new sketch:
+-> go to portfolio-grid container under **sketches** section in index.html <div class="portfolio-grid"> 
+-> follow the same approach above.
+## Updating script.js
+   This file is responsible for displaying specific information for each project. 
+   After adding a new project or sketch in index.html, you need to add it in script.js as object. 
+   **Steps**
+        1. Place the cursor at the end of the last object e.g sketch3:{}
+sketch3: {
+    title: "Black and White Study Sketch",
+    description: "A black and white study sketch emphasizes contrast, form, and shading through the use of only black ink, charcoal, or graphite on a white background. It often focuses on the interplay of light and shadow, capturing intricate details or creating dramatic silhouettes. The sketch could feature minimalist or detailed line work, abstract shapes, or realistic renderings, depending on the artist's approach. ",
+    gallery: [
+        "<img src='assets/Black and White Study Sketch 1.jpg' alt='Black and White Study Sketch'>",
+        "<img src='assets/Black and White Study Sketch 2.jpg' alt='Black and White Study Sketch'>",
+        "<img src='assets/Black and White Study Sketch 3.jpg' alt='Black and White Study Sketch'>"
+        
+    ],
+   link: "https://github.com" // Add project link
+}
+        2. Place a comma and hit enter.
+        3. use the same format for sketch3: {} to add new sketch.
+        4. for new projects follow the same approach but replace sketch with project e.g project7 or project8 . 
+        5. Remember to include project link either Github or any other url.
+**Note**
+  All images addedd in index and script.js should be stored in assests folder. 
+
+

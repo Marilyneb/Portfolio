@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marilyne Bassoulou</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="home">
+        <!-- Logo -->
+        <div class="logo">
+          <span class="logo-part1">Marilyne</span>
+          <span class="logo-part2">Bassoulou</span>
+        </div>
+        <!-- Tagline -->
+        <div class="tagline">
+          GRAPHICS &bull; DESIGN &bull; SIMULATION &bull; TD
+        </div>
+    </header>
+      <!-- Navigation Menu -->
+    <nav id="navbar">
+        <a href="#home">HOME</a>
+        <a href="#projects" >PROJECTS</a>
+        <a href="#sketches" >SKETCHES</a>
+        <a href="#about">ABOUT ME</a>
+    </nav>      
+    <!-- Projects Section -->
+    <section id="projects" class="portfolio-section">
+        <h2>Projects</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item" onclick="openModal('project1')">
+                <video src="assets/TheElevatorPitch_GroupProject_2024.mov" poster="assets/Thumbnail1.png" controls></video>
+                <h3>The Elevator Pitch</h3>
+            </div>
+            <div class="portfolio-item" onclick="openModal('project2')">
+                <video src="assets/interactive_shader_editor (480p).mp4" poster="assets/Thumbnail2.png" controls></video>
+                <h3>Interactive Shader Editor</h3>
+            </div>
+            <div class="portfolio-item" onclick="openModal('project3')">
+              <video src="assets/project2 (720p).mp4" poster="assets/Thumbnail3.png"  controls></video>
+              <h3>Coffee Advertisement</h3>
+          </div>
+          <div class="portfolio-item" onclick="openModal('project4')">
+            <img src="assets/Avocadooo.jpg" alt="Avocado Render"></img>
+            <h3>Avocado Render</h3>
+          </div>
+          <div class="portfolio-item"onclick="openModal('project5')">
+            <video src="assets/My Movie 4.mp4" controls></video>
+            <h3>Bouncing Ball</h3>
+          </div>
+          <div class="portfolio-item"onclick="openModal('project6')">
+            <video src="assets/project (720p).mp4" poster="assets/Thumbnail4.png" controls></video>
+            <h3>The Inn at the Edge of the World</h3>
+          </div>
+          <div class="portfolio-item" onclick="openModal('project7')">
+            <video src="assets/Houdini.mov"  poster="assets/Thumbnail5.png" controls></video>
+            <h3>Houdini</h3>
+          </div>
+          <div class="portfolio-item" onclick="openModal('project8')">
+            <video src="assets/video.mp4" poster="assets/Thumbnail6.png" controls></video>
+            <h3>Asset Library</h3>
+        </div>
+          <div class="portfolio-item"onclick="openModal('project10')">
+            <video src="assets/marilyne_bassoulou_csc_343_final_project (720p).mp4" poster="assets/Thumbnail8.png"  controls></video>
+            <h3>Character Animation</h3>
+          </div>
+        </div>
+    </section>
+
+    <!-- Sketches Section -->
+    <section id="sketches" class="portfolio-section">
+        <h2>Sketches</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item" onclick="openModal('sketch1')">
+                <img src="assets/marilyne-bassoulou-wine-colored.jpg" alt="Colored Wine Study">
+                <p>Colored Wine Study</p>
+            </div>
+            <div class="portfolio-item" onclick="openModal('sketch2')">
+                <img src="assets/marilyne-bassoulou-wine.jpg" alt="Wine Illustration">
+                <p>Wine Illustration</p>
+            </div>
+            <div class="portfolio-item" onclick="openModal('sketch3')">
+                <img src="assets/marilyne-bassoulou-study-project-1-1.jpg" alt="Abstract Study">
+                <p>Abstract Study</p>
+            </div>
+            <div class="portfolio-item" onclick="openModal('sketch4')">
+                <img src="assets/marilyne-bassoulou-study-project-2.jpg" alt="Black and White Study Sketch">
+                <p>Black and White Study Sketch</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="about-me-section">
+        <h2> About Me </h2>
+        <div class="about-container">
+            <!-- Image on the left -->
+            <div class="about-image">
+                <img src="assets/default-profile-picture-grey-female-icon.svg" alt="Name" />
+            </div>
+            <!-- Details on the right -->
+            <div class="about-details">
+                <p> I am <strong>Marilyne Bassoulou</strong>, a creative and technically skilled designer with an MSc in Computer Animation and Visual Effects from Bournemouth University.</p>
+                <p>With a strong foundation in computer science and a passion for design, I specialize in crafting visually compelling and user-centric experiences. I’m driven by the intersection of art and technology, using my expertise to create designs that are both aesthetically striking and functionally seamless. With hands-on experience in design tools and programming, I’m excited to bring new, innovative ideas to life.</p>
+        
+    
+                <h3>Contact Information</h3>
+                <ul>
+                    <li><strong>Email:</strong> marilynebassoulow@gmail.com</a></li>
+                </ul>
+    
+                <a href="assets/MarilyneBasoulou CV.pdf" class="resume-button" download>Resume</a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer id="footer">
+    <div class="footer-content">
+        <div class="social-links">
+            <a href="https://linkedin.com/in/marilyne-bassoulou" target="_blank" class="social-icon">
+                <img src="assets/black-linkedin-logo-15915.svg" alt="LinkedIn" />
+            </a>
+            <a href="https://facebook.com" target="_blank" class="social-icon">
+                <img src="assets/211904_social_github_icon.svg" alt="Github" />
+            </a>
+            <a href="https://marilynebassoulou.artstation.com" target="_blank" class="social-icon">
+                <img src="assets/8666128_artstation_icon.svg" alt="Artstation" />
+            </a>
+        </div>
+    </div>
+    </footer>
+
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <button id="close-modal" class="close-modal">&times;</button> <!-- Close button -->
+          <h2 id="modal-title"></h2>
+          <p id="modal-description"></p>
+          <div class="modal-gallery-container">
+              <button class="modal-arrow modal-left-arrow" onclick="prevItem()">&#10094;</button>
+              <div class="modal-gallery" id="modal-gallery"></div>
+              <button class="modal-arrow modal-right-arrow" onclick="nextItem()">&#10095;</button>
+          </div>
+          <a class="view-more" href="#" target="_blank" rel="noopener noreferrer">Open on Github</a>
+      </div>
+  </div>
+ 
+
+    <script src="js/script.js"></script>
+</body>
+</html>
