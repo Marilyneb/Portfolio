@@ -9,13 +9,13 @@ const modalData = {
 
   },
   project2: {
-      title: "Interactive Shader Editor",
-      description: "The Interactive Shader Editor project focuses on creating an intuitive, user-friendly platform for designing and experimenting with shaders in real time. This tool allows users to write, modify, and visualize custom shaders through an interactive interface, providing instant feedback on changes. The project aims to facilitate exploration and learning of shader programming by making complex concepts accessible to both beginners and advanced users.",
-      gallery: [
-          "<video controls src='assets/interactive_shader_editor (480p).mp4'></video>",
-          
-      ],
-      link: "https://github.com/Marilyneb/Shader-Editor-MSc-Project" // Add project link
+    title: "Interactive Shader Editor",
+    description: "The Interactive Shader Editor project focuses on creating an intuitive, user-friendly platform for designing and experimenting with shaders in real time. This tool allows users to write, modify, and visualize custom shaders through an interactive interface, providing instant feedback on changes. The project aims to facilitate exploration and learning of shader programming by making complex concepts accessible to both beginners and advanced users.",
+    gallery: [
+      // Embed the Vimeo video instead of using a direct video file
+      "<iframe src='https://player.vimeo.com/video/1016816163?share=copy#t=0' width='640' height='360' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
+    ],
+    link: "https://github.com/Marilyneb/Shader-Editor-MSc-Project" // Add project link
   },
   project3: {
     title: "Coffee Advertisement",
@@ -141,7 +141,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
-  // Open the modal
   function openModal(key) {
     const modal = document.getElementById("modal");
     const title = document.getElementById("modal-title");
@@ -156,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (data) {
       title.textContent = data.title;
       description.textContent = data.description || "";
-      gallery.innerHTML = data.gallery.map(item => `<div class="gallery-item">${item}</div>`).join("");
+      gallery.innerHTML = data.gallery.map(item => `<div class="gallery-item">${item}</div>`).join(""); // This will work for iframe as well
       viewMoreButton.style.display = data.link ? "inline-block" : "none";
       if (data.link) viewMoreButton.href = data.link;
   
@@ -166,8 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       console.error(`No data found for key: ${key}`);
     }
-  }
-  
+}
   // Close the modal
   function closeModal() {
     const modal = document.getElementById("modal");
