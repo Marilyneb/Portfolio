@@ -126,104 +126,82 @@ sketch4: {
 }
 };
 
-// open the modal
-function openModal(key) {
-    // Pause all videos on the page
-    const videos = document.querySelectorAll('video');
-    videos.forEach(video => {
-        video.pause();
+// Lazy load all videos and images
+document.addEventListener("DOMContentLoaded", () => {
+    const lazyVideos = document.querySelectorAll("video");
+    const lazyImages = document.querySelectorAll("img");
+  
+    lazyVideos.forEach(video => {
+      video.setAttribute("loading", "lazy");
+      video.setAttribute("preload", "none");
     });
-
-    const modal = document.getElementById('modal');
-    const title = document.getElementById('modal-title');
-    const description = document.getElementById('modal-description');
-    const gallery = document.getElementById('modal-gallery');
-    const viewMoreButton = document.querySelector('.view-more');
+  
+    lazyImages.forEach(img => {
+      img.setAttribute("loading", "lazy");
+    });
+  });
+  
+  // Open the modal
+  function openModal(key) {
+    const modal = document.getElementById("modal");
+    const title = document.getElementById("modal-title");
+    const description = document.getElementById("modal-description");
+    const gallery = document.getElementById("modal-gallery");
+    const viewMoreButton = document.querySelector(".view-more");
     const data = modalData[key];
   
+    // Pause all videos on the page
+    document.querySelectorAll("video").forEach(video => video.pause());
+  
     if (data) {
-        title.textContent = data.title;
-        description.textContent = data.description;
-        gallery.innerHTML = data.gallery.map((item, index) =>
-            `<div class="gallery-item" data-index="${index}">${item}</div>`
-        ).join("");
-
-        // Show link button only if the project has a valid link
-        if (data.link && data.link !== "") {
-            viewMoreButton.style.display = 'inline-block';
-            viewMoreButton.href = data.link;
-            viewMoreButton.textContent = 'Open on GitHub';
-        } else {
-            viewMoreButton.style.display = 'none';
-        }
-
-        currentIndex = 0; 
-        updateGallery();
-        modal.style.display = 'flex';
+      title.textContent = data.title;
+      description.textContent = data.description || "";
+      gallery.innerHTML = data.gallery.map(item => `<div class="gallery-item">${item}</div>`).join("");
+      viewMoreButton.style.display = data.link ? "inline-block" : "none";
+      if (data.link) viewMoreButton.href = data.link;
+  
+      modal.style.display = "flex";
+      currentIndex = 0;
+      updateGallery();
     } else {
-        console.error(`No data found for key: ${key}`);
+      console.error(`No data found for key: ${key}`);
     }
-}
-// close the modal
-function closeModal() {
-    const modal = document.getElementById('modal');
-    const videoElements = modal.querySelectorAll('video');
-
-    // Pause all video elements inside the modal and reset them
-    videoElements.forEach(video => {
-        video.pause();
-        video.currentTime = 0; // Reset to the beginning
+  }
+  
+  // Close the modal
+  function closeModal() {
+    const modal = document.getElementById("modal");
+    modal.style.display = "none";
+  
+    // Pause and reset modal videos
+    modal.querySelectorAll("video").forEach(video => {
+      video.pause();
+      video.currentTime = 0;
     });
-
-    // Ensure thumbnails are displayed for all video items in the portfolio
-    const portfolioItems = document.querySelectorAll('.portfolio-item video');
-    portfolioItems.forEach(item => {
-        if (item) {
-            // Check if the video has a poster attribute
-            const hasPoster = item.getAttribute('poster');
-            if (hasPoster) {
-                // Reset the poster to its original state upon modal close
-                item.load(); // Reload to show thumbnail
-            }
-        }
-    });
-
-    modal.style.display = 'none';
-}
-// Add event listener to the close button
-document.getElementById('close-modal').addEventListener('click', closeModal);
-
-// Close the modal when clicking outside of it
-window.addEventListener('click', (event) => {
-    const modal = document.getElementById('modal');
-    if (event.target === modal) {
-        closeModal();
-    }
-});
-
-// Function gallery view
-function updateGallery() {
-    const gallery = document.getElementById('modal-gallery');
-    const totalItems = gallery.children.length;
-
-    // show the current item
+  }
+  
+  document.getElementById("close-modal").addEventListener("click", closeModal);
+  window.addEventListener("click", event => {
+    if (event.target === document.getElementById("modal")) closeModal();
+  });
+  
+  // Gallery navigation
+  function updateGallery() {
+    const gallery = document.getElementById("modal-gallery");
     gallery.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-
-// navigate to the next gallery item
-function nextItem() {
-    const gallery = document.getElementById('modal-gallery');
-    const totalItems = gallery.children.length;
-    if (currentIndex < totalItems - 1) {
-        currentIndex++;
-        updateGallery();
+  }
+  
+  function nextItem() {
+    const gallery = document.getElementById("modal-gallery");
+    if (currentIndex < gallery.children.length - 1) {
+      currentIndex++;
+      updateGallery();
     }
-}
-// navigate to the previous gallery item
-function prevItem() {
+  }
+  
+  function prevItem() {
     if (currentIndex > 0) {
-        currentIndex--;
-        updateGallery();
+      currentIndex--;
+      updateGallery();
     }
-}
-
+  }
