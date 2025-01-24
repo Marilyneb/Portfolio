@@ -3,7 +3,7 @@ const modalData = {
       title: "The Elevator Pitch",
       description: "A collaborative short film project focused on delivering a powerful and concise narrative within a limited time frame. This project simulates the high-stakes scenario of pitching an idea or concept in the span of an elevator ride. It explores the art of storytelling by showcasing creativity, teamwork, and effective communication. From scriptwriting and storyboarding to filming and editing, the project emphasizes clarity and engagement, delivering a memorable message in a visually compelling manner.",
       gallery: [
-          "<video controls src='assets/TheElevatorPitch_GroupProject_2024.mp4'></video>",
+          "<video controls src='assets/TheElevatorPitch_GroupProject_2024.mov'></video>",
          
       ],
 
