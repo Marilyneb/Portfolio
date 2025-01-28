@@ -5,8 +5,7 @@ const modalData = {
         gallery: [
           "<iframe src='https://player.vimeo.com/video/1016807693' width='640' height='360' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
         ],
-         
-      },
+    },
   project2: {
     title: "Interactive Shader Editor",
     description: "The Interactive Shader Editor project focuses on creating an intuitive, user-friendly platform for designing and experimenting with shaders in real time. This tool allows users to write, modify, and visualize custom shaders through an interactive interface, providing instant feedback on changes. The project aims to facilitate exploration and learning of shader programming by making complex concepts accessible to both beginners and advanced users.",
@@ -33,20 +32,18 @@ const modalData = {
   },
   project5: {
     title: "Bouncing Ball",
-    description: "The primary artistic influence for this project is M.C. Escher's iconic print featuring an impossible staircase.The goal is to capture the essence of Escher's optical illusions while incorporating realistic bouncing ball movement in the animation.",
+    description: "The primary artistic influence for this project is M.C. Escher's iconic print featuring an impossible staircase. The goal is to capture the essence of Escher's optical illusions while incorporating realistic bouncing ball movement in the animation.",
     gallery: [
-        "<iframe src='https://vimeo.com/1049884923?share=copy#t=0' width='640' height='360' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
-      ],
-   
-  },
-  project6: {
+        "<iframe src='https://player.vimeo.com/video/1049884923' width='640' height='360' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
+    ],
+},
+project6: {
     title: "The Inn at the Edge of the World",
     description: "A short movie inspired by a short script. This project was a collaboration with a fellow student.",
     gallery: [
-        "<iframe src='https://vimeo.com/750031839?share=copy#t=0' width='640' height='360' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
-      ],
- 
-  },
+        "<iframe src='https://player.vimeo.com/video/750031839' width='640' height='360' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
+    ],
+},
   project7: {
     title: "Houdini Digital Asset (HDA)",
     description: "The aim of the Houdini project was to create a Houdini Digital Asset (HDA) for generating a garden that can be configured with a user interface.",
@@ -114,75 +111,73 @@ sketch4: {
 document.addEventListener("DOMContentLoaded", () => {
     const lazyVideos = document.querySelectorAll("video");
     const lazyImages = document.querySelectorAll("img");
-  
+
     lazyVideos.forEach(video => {
-      video.setAttribute("loading", "lazy");
-      video.setAttribute("preload", "none");
+        video.setAttribute("loading", "lazy");
+        video.setAttribute("preload", "none");
     });
-  
+
     lazyImages.forEach(img => {
-      img.setAttribute("loading", "lazy");
+        img.setAttribute("loading", "lazy");
     });
-  });
-  
-  function openModal(key) {
+});
+
+function openModal(key) {
     const modal = document.getElementById("modal");
     const title = document.getElementById("modal-title");
     const description = document.getElementById("modal-description");
     const gallery = document.getElementById("modal-gallery");
     const viewMoreButton = document.querySelector(".view-more");
     const data = modalData[key];
-  
+
     // Pause all videos on the page
     document.querySelectorAll("video").forEach(video => video.pause());
-  
+
     if (data) {
-      title.textContent = data.title;
-      description.textContent = data.description || "";
-      gallery.innerHTML = data.gallery.map(item => `<div class="gallery-item">${item}</div>`).join(""); // This will work for iframe as well
-      viewMoreButton.style.display = data.link ? "inline-block" : "none";
-      if (data.link) viewMoreButton.href = data.link;
-  
-      modal.style.display = "flex";
-      currentIndex = 0;
-      updateGallery();
+        title.textContent = data.title;
+        description.textContent = data.description || "";
+        gallery.innerHTML = data.gallery.map(item => `<div class="gallery-item">${item}</div>`).join(""); // This will work for iframe as well
+        viewMoreButton.style.display = data.link ? "inline-block" : "none";
+        if (data.link) viewMoreButton.href = data.link;
+
+        modal.style.display = "flex";
+        currentIndex = 0;
+        updateGallery();
     } else {
-      console.error(`No data found for key: ${key}`);
+        console.error(`No data found for key: ${key}`);
     }
 }
-  // Close the modal
-  function closeModal() {
+
+function closeModal() {
     const modal = document.getElementById("modal");
     modal.style.display = "none";
 
-    // Pause and reset modal videos
-    modal.querySelectorAll("video").forEach(video => {
-      video.pause();
-      video.currentTime = 0;
-    });
-  }
+    // Reset modal content to avoid lingering videos
+    document.getElementById("modal-gallery").innerHTML = "";
 
-  document.getElementById("close-modal").addEventListener("click", closeModal);
-  window.addEventListener("click", event => {
+    // Pause and reset modal videos
+    document.querySelectorAll(".portfolio-item video").forEach(video => {
+        video.pause();
+        video.currentTime = 0;
+        video.removeAttribute("src"); // Remove source to force refresh
+        video.load(); // Reload video to ensure poster is displayed
+    });
+
+    // Stop and reset iframe videos
+    document.querySelectorAll(".modal iframe").forEach(iframe => {
+        const src = iframe.src;
+        iframe.src = ""; // Remove src to stop video
+        setTimeout(() => {
+            iframe.src = src; // Restore src after a short delay
+        }, 100);
+    });
+}
+
+
+
+
+
+document.getElementById("close-modal").addEventListener("click", closeModal);
+window.addEventListener("click", event => {
     if (event.target === document.getElementById("modal")) closeModal();
-  });
-  // Gallery navigation
-  function updateGallery() {
-    const gallery = document.getElementById("modal-gallery");
-    gallery.style.transform = `translateX(-${currentIndex * 100}%)`;
-  }
-  
-  function nextItem() {
-    const gallery = document.getElementById("modal-gallery");
-    if (currentIndex < gallery.children.length - 1) {
-      currentIndex++;
-      updateGallery();
-    }
-  }
-  
-  function prevItem() {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateGallery();
-    }
-  }
+});
