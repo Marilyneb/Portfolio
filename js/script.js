@@ -3,15 +3,14 @@ const modalData = {
         title: "The Elevator Pitch",
         description: "A collaborative short film project focused on delivering a powerful and concise narrative within a limited time frame. This project simulates the high-stakes scenario of pitching an idea or concept in the span of an elevator ride. It explores the art of storytelling by showcasing creativity, teamwork, and effective communication. From scriptwriting and storyboarding to filming and editing, the project emphasizes clarity and engagement, delivering a memorable message in a visually compelling manner.",
         gallery: [
-          "<iframe src='https://player.vimeo.com/video/1016807693?autoplay=1' width='640' height='360' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
+          "<iframe src='https://player.vimeo.com/video/1016807693' width='640' height='360' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
         ],
-        link: "https://github.com/Marilyneb/Shader-Editor-MSc-Project" // Add project link
+         
       },
   project2: {
     title: "Interactive Shader Editor",
     description: "The Interactive Shader Editor project focuses on creating an intuitive, user-friendly platform for designing and experimenting with shaders in real time. This tool allows users to write, modify, and visualize custom shaders through an interactive interface, providing instant feedback on changes. The project aims to facilitate exploration and learning of shader programming by making complex concepts accessible to both beginners and advanced users.",
     gallery: [
-      // Embed the Vimeo video instead of using a direct video file
       "<iframe src='https://player.vimeo.com/video/1016816163?share=copy#t=0' width='640' height='360' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
     ],
     link: "https://github.com/Marilyneb/Shader-Editor-MSc-Project" // Add project link
@@ -36,17 +35,16 @@ const modalData = {
     title: "Bouncing Ball",
     description: "The primary artistic influence for this project is M.C. Escher's iconic print featuring an impossible staircase.The goal is to capture the essence of Escher's optical illusions while incorporating realistic bouncing ball movement in the animation.",
     gallery: [
-        "<video controls src='assets/My Movie 4.mp4'></video>",
-       
-    ],
+        "<iframe src='https://vimeo.com/1049884923?share=copy#t=0' width='640' height='360' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
+      ],
    
   },
-  project5: {
-    title: "Bouncing Ball",
-    description: "The primary artistic influence for this project is M.C. Escher's iconic print featuring an impossible staircase. The goal is to capture the essence of Escher's optical illusions while incorporating realistic bouncing ball movement in the animation.",
+  project6: {
+    title: "The Inn at the Edge of the World",
+    description: "A short movie inspired by a short script. This project was a collaboration with a fellow student.",
     gallery: [
-      "<iframe src='https://player.vimeo.com/video/1049884923?autoplay=1' width='640' height='360' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
-    ],
+        "<iframe src='https://vimeo.com/750031839?share=copy#t=0' width='640' height='360' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
+      ],
  
   },
   project7: {
@@ -65,16 +63,8 @@ const modalData = {
     ],
     link: "https://github.com/NCCA/msccavepipelineandtdproject24-Marilyneb/tree/main" // Add project link
   },
+
 project9: {
-    title: "Fire Simulation",
-    description: "The Interactive Shader Editor project focuses on creating an intuitive, user-friendly platform for designing and experimenting with shaders in real time. This tool allows users to write, modify, and visualize custom shaders through an interactive interface, providing instant feedback on changes. The project aims to facilitate exploration and learning of shader programming by making complex concepts accessible to both beginners and advanced users. The editor would support various types of shaders, such as vertex, fragment, and compute shaders, and provide a range of built-in effects and visualizations.",
-    gallery: [
-        "<video controls src='assets/interactive_shader_editor (480p).mp4'></video>",
-        
-    ],
-    link: "https://github.com" // Add project link
-},
-project10: {
     title: "Character Animation",
     description: "", // Add description if applicable
     gallery: [
@@ -164,19 +154,18 @@ document.addEventListener("DOMContentLoaded", () => {
   function closeModal() {
     const modal = document.getElementById("modal");
     modal.style.display = "none";
-  
+
     // Pause and reset modal videos
     modal.querySelectorAll("video").forEach(video => {
       video.pause();
       video.currentTime = 0;
     });
   }
-  
+
   document.getElementById("close-modal").addEventListener("click", closeModal);
   window.addEventListener("click", event => {
     if (event.target === document.getElementById("modal")) closeModal();
   });
-  
   // Gallery navigation
   function updateGallery() {
     const gallery = document.getElementById("modal-gallery");
