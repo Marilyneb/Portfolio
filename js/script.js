@@ -155,26 +155,19 @@ function closeModal() {
     // Reset modal content to avoid lingering videos
     document.getElementById("modal-gallery").innerHTML = "";
 
-    // Pause and reset modal videos
+    // Stop native HTML5 videos
     document.querySelectorAll(".portfolio-item video").forEach(video => {
         video.pause();
         video.currentTime = 0;
-        video.removeAttribute("src"); // Remove source to force refresh
-        video.load(); // Reload video to ensure poster is displayed
+        video.load(); // Reload the video to ensure the poster is displayed
     });
-
-    // Stop and reset iframe videos
-    document.querySelectorAll(".modal iframe").forEach(iframe => {
+    // Stop and reset Vimeo iframe videos properly
+    document.querySelectorAll("#modal-gallery iframe").forEach(iframe => {
         const src = iframe.src;
         iframe.src = ""; // Remove src to stop video
-        setTimeout(() => {
-            iframe.src = src; // Restore src after a short delay
-        }, 100);
+        iframe.src = src; // Restore src after a small delay
     });
 }
-
-
-
 
 
 document.getElementById("close-modal").addEventListener("click", closeModal);
