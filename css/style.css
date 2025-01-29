@@ -387,8 +387,10 @@ header .tagline {
 @media screen and (max-width: 600px) {
     .modal-content {
         width: 90%; /* Ensures the modal content is a bit smaller on mobile */
-        height: 80%; /* Allows for vertical space */
-        max-height: 90vh; /* Limits height to 90% of viewport height */
+        max-width: 95%; /* Keeps the modal from getting too wide */
+        height: auto;
+        max-height: 90vh;
+        overflow-y: auto;  /* Limits height to 90% of viewport height */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -402,7 +404,6 @@ header .tagline {
         justify-content: center;
         align-items: center;
         width: 100%;
-        overflow: hidden;
     }
 
     /* Adjust gallery items (videos and images) */
@@ -416,16 +417,16 @@ header .tagline {
     /* Style adjustments for videos in modal */
     .gallery-item img,
     .gallery-item video {
-        width: 100%; /* Limit width to 100% of the container */
-        max-width: 100%; /* Prevent overflow */
-        max-height: 80vh; /* Limit video height to 80% of viewport height */
-        height: auto; /* Allow the height to scale proportionally */
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: 80vh;
         object-fit: contain; /* Keep aspect ratio */
     }
 
     .modal-arrow {
-        font-size: 20px;
-        padding: 12px;
+        font-size: 22px;
+        padding: 16px;
     }
 
     .view-more {
