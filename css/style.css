@@ -411,11 +411,12 @@ header .tagline {
 
     .gallery-item img,
     .gallery-item video {
-        max-width: 100%; /* Make sure the video fits the width */
-        max-height: 60vh; /* Limit the height for the video */
+        max-width: 90%; /* Prevent the video from being too wide */
+        max-height: 80vh; /* Limit the height for the video */
+        width: auto; /* Allow the width to scale with height */
+        height: auto; /* Maintain aspect ratio */
         object-fit: contain; /* Ensure the video maintains aspect ratio */
     }
-
     .modal-arrow {
         font-size: 20px; /* Make arrow buttons slightly larger */
         padding: 12px;
