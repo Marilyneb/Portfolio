@@ -390,7 +390,6 @@ header .tagline {
         max-width: 100%; /* Prevents overflow */
         height: auto;
         max-height: 85vh; /* Keeps within viewport */
-        overflow: hidden; /* Prevents unwanted scrolling */
         display: flex;
         flex-direction: column;
         align-items: center;
