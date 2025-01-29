@@ -378,76 +378,6 @@ header .tagline {
     transform: scale(1.2);
 }
 
-/* Responsive Design Adjustments */
-@media screen and (max-width: 768px) {
-    /* Navbar adjustments */
-    #navbar a {
-        font-size: 12px; /* Smaller text for links */
-        margin: 0 8px; /* Reduce spacing between links */
-    }
-
-    /* Portfolio Section */
-    .portfolio-grid {
-        grid-template-columns: 1fr; /* Stack items in one column */
-        gap: 10px; /* Smaller spacing */
-    }
-
-    .portfolio-item img,
-    .media-item img,
-    .portfolio-item video {
-        max-height: 200px; /* Reduce media height for smaller screens */
-    }
-
-    /* About Section */
-    .about-container {
-        flex-direction: column; /* Stack image and text vertically */
-        text-align: center;
-    }
-
-    .about-image img {
-        width: 150px; /* Smaller image */
-        height: 150px;
-        margin: 0 auto 20px; /* Center the image */
-    }
-
-    .about-details h2 {
-        font-size: 1.8em; /* Slightly smaller heading */
-    }
-
-    .about-details p {
-        font-size: 1em; /* Reduce paragraph size */
-    }
-
-    .about-details a {
-        font-size: 0.9em; /* Smaller button text */
-        padding: 10px 15px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    /* Modal Adjustments */
-    .modal-gallery {
-        height: auto; /* Let the height adjust dynamically */
-    }
-
-    .gallery-item {
-        flex: 0 0 100%; /* Make each item full width */
-    }
-
-    /* Footer Adjustments */
-    #footer {
-        padding: 15px 5px;
-    }
-
-    .footer-content p {
-        font-size: 12px; /* Smaller footer text */
-    }
-
-    .social-icon img {
-        width: 40px; /* Smaller social icons */
-        height: 40px;
-    }
-}
 /* Ensure the modal content fits the screen */
 .modal-content {
     width: 90%; /* Reduce width for smaller screens */
@@ -466,24 +396,60 @@ header .tagline {
     object-fit: contain; /* Ensure the video fits within the boundaries */
 }
 
-/* Adjust modal layout on smaller screens */
-@media screen and (max-width: 600px) {
+/* Mobile Adjustments for Vimeo Video Fullscreen */
+@media screen and (max-width: 768px) {
+    /* Ensure video container allows fullscreen and is responsive */
+    .gallery-item video {
+        width: 100%; /* Full width of the container */
+        height: auto;  /* Maintain aspect ratio */
+        max-height: 80vh; /* Prevent the video from exceeding screen height */
+        object-fit: contain; /* Ensure video stays within boundaries */
+        display: block; /* Remove any unwanted space around the video */
+        margin: 0 auto; /* Center the video */
+        z-index: 10; /* Ensure the video controls are on top */
+    }
+
+    /* Ensure iframe and video containers are not blocking the fullscreen button */
+    .gallery-item iframe, .gallery-item video {
+        position: relative;
+        z-index: 10; /* Allow fullscreen button to appear above content */
+    }
+
+    /* Make sure video controls are visible */
+    .gallery-item video::-webkit-media-controls {
+        display: block;
+    }
+    
+    /* Optional: Adjust the video container to allow more space */
     .modal-gallery-container {
-        flex-direction: column; /* Stack items vertically */
         padding: 10px;
     }
 
-    .modal-arrow {
-        padding: 8px; /* Reduce arrow size for smaller screens */
-    }
-
-    .gallery-item {
-        flex: 0 0 100%; /* Make items take full width */
-    }
-
+    /* Modal layout adjustments for mobile screens */
     .modal-content {
-        width: 95%; /* Take most of the phone screen */
+        width: 95%; /* Ensure the modal takes most of the phone screen */
         padding: 10px;
     }
 }
 
+/* Adjust Modal Layout for Smaller Screens */
+@media screen and (max-width: 600px) {
+    /* Ensure gallery items fill full width */
+    .gallery-item {
+        flex: 0 0 100%; /* Make each item full width */
+    }
+
+    /* Footer Adjustments */
+    #footer {
+        padding: 15px 5px;
+    }
+
+    .footer-content p {
+        font-size: 12px; /* Smaller footer text */
+    }
+
+    .social-icon img {
+        width: 40px; /* Smaller social icons */
+        height: 40px;
+    }
+}
