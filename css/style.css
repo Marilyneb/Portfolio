@@ -354,7 +354,7 @@ header .tagline {
 
     /* Adjust gallery items (images and videos) */
     .gallery-item img {
-        max-width: 90%;
+        max-width: 50%;
         max-height: 60vh; /* Lower max-height for mobile */
         object-fit: contain; /* Maintains aspect ratio */
     }
