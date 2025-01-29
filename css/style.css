@@ -411,7 +411,7 @@ header .tagline {
 
     .gallery-item img,
     .gallery-item video {
-        max-width: 90%; /* Prevent the video from being too wide */
+        max-width: 50%; /* Prevent the video from being too wide */
         max-height: 80vh; /* Limit the height for the video */
         width: auto; /* Allow the width to scale with height */
         height: auto; /* Maintain aspect ratio */
