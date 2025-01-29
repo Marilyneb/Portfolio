@@ -18,7 +18,7 @@ const modalData = {
     title: "Coffee Advertisement",
     description: "", // Add description if applicable
     gallery: [
-      "<iframe src='https://player.vimeo.com/video/1049884794?autoplay=1' width='640' height='360' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
+      "<iframe src='https://player.vimeo.com/video/1049884794' width='640' height='360' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
     ],
   },
   project4: {
@@ -48,7 +48,7 @@ project6: {
     title: "Houdini Digital Asset (HDA)",
     description: "The aim of the Houdini project was to create a Houdini Digital Asset (HDA) for generating a garden that can be configured with a user interface.",
     gallery: [
-      "<iframe src='https://player.vimeo.com/video/1049884680?autoplay=1' width='640' height='360' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
+      "<iframe src='https://player.vimeo.com/video/1049884680' width='640' height='360' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
     ],
 
   },
@@ -56,7 +56,7 @@ project6: {
     title: "Asset Library",
     description: "This project is a web-based application that allows users to upload, tag, and search for 3D models.",
     gallery: [
-      "<iframe src='https://player.vimeo.com/video/1049885295?autoplay=1' width='640' height='360' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
+      "<iframe src='https://player.vimeo.com/video/1049885295' width='640' height='360' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
     ],
     link: "https://github.com/NCCA/msccavepipelineandtdproject24-Marilyneb/tree/main" // Add project link
   },
@@ -65,7 +65,7 @@ project9: {
     title: "Character Animation",
     description: "", // Add description if applicable
     gallery: [
-      "<iframe src='https://player.vimeo.com/video/666804772?autoplay=1' width='640' height='360' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
+      "<iframe src='https://player.vimeo.com/video/666804772' width='640' height='360' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
     ],
   
 },
