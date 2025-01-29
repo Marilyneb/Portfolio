@@ -357,7 +357,8 @@ header .tagline {
     .gallery-item img {
         max-width: 100%;
         height: auto;
-        object-fit: contain; /* Keeps aspect ratio */
+        max-height: 80vh;  /* Ensure images fit within the screen */
+        object-fit: contain;
         border-radius: 8px;
     }
     .gallery-item video {
