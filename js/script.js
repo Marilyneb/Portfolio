@@ -122,6 +122,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Lazy load all videos and images
+document.addEventListener("DOMContentLoaded", () => {
+    const lazyVideos = document.querySelectorAll("video");
+    const lazyImages = document.querySelectorAll("img");
+
+    lazyVideos.forEach(video => {
+        video.setAttribute("loading", "lazy");
+        video.setAttribute("preload", "none");
+    });
+
+    lazyImages.forEach(img => {
+        img.setAttribute("loading", "lazy");
+    });
+});
+
 function openModal(key) {
     const modal = document.getElementById("modal");
     const title = document.getElementById("modal-title");
