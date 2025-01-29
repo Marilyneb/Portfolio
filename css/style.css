@@ -322,6 +322,98 @@ header .tagline {
     color: #ff0000;
     transform: scale(1.1);
 }
+@media screen and (max-width: 600px) {
+    .gallery-item {
+        flex: 0 0 100%;
+    }
+
+    .modal-arrow {
+        padding: 8px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .footer-content p {
+        font-size: 12px;
+    }
+
+    .social-icon img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Footer */
+#footer {
+    background-color: #111;
+    color: #ddd;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.social-links {
+    margin: 10px 0;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img {
+    width: 50px;
+    height: 50px;
+    filter: invert(100%);
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Mobile Adjustments for Vimeo Video Fullscreen */
+@media screen and (max-width: 768px) {
+    .gallery-item video {
+        width: 100%;
+        height: auto;
+        max-height: 80vh;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+        z-index: 10;
+    }
+
+    .gallery-item iframe,
+    .gallery-item video {
+        position: relative;
+        z-index: 10;
+    }
+
+    .gallery-item video::-webkit-media-controls {
+        display: block;
+    }
+
+    .modal-gallery-container {
+        padding: 10px;
+    }
+
+    .modal-content {
+        width: 65%;
+        padding: 10px;
+    }
+}
 
 /* Adjustments for Mobile */
 @media screen and (max-width: 600px) {
