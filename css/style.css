@@ -377,3 +377,74 @@ header .tagline {
 .social-icon:hover {
     transform: scale(1.2);
 }
+
+/* Responsive Design Adjustments */
+@media screen and (max-width: 768px) {
+    /* Navbar adjustments */
+    #navbar a {
+        font-size: 12px; /* Smaller text for links */
+        margin: 0 8px; /* Reduce spacing between links */
+    }
+
+    /* Portfolio Section */
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Stack items in one column */
+        gap: 10px; /* Smaller spacing */
+    }
+
+    .portfolio-item img,
+    .media-item img,
+    .portfolio-item video {
+        max-height: 200px; /* Reduce media height for smaller screens */
+    }
+
+    /* About Section */
+    .about-container {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 150px; /* Smaller image */
+        height: 150px;
+        margin: 0 auto 20px; /* Center the image */
+    }
+
+    .about-details h2 {
+        font-size: 1.8em; /* Slightly smaller heading */
+    }
+
+    .about-details p {
+        font-size: 1em; /* Reduce paragraph size */
+    }
+
+    .about-details a {
+        font-size: 0.9em; /* Smaller button text */
+        padding: 10px 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* Modal Adjustments */
+    .modal-gallery {
+        height: auto; /* Let the height adjust dynamically */
+    }
+
+    .gallery-item {
+        flex: 0 0 100%; /* Make each item full width */
+    }
+
+    /* Footer Adjustments */
+    #footer {
+        padding: 15px 5px;
+    }
+
+    .footer-content p {
+        font-size: 12px; /* Smaller footer text */
+    }
+
+    .social-icon img {
+        width: 40px; /* Smaller social icons */
+        height: 40px;
+    }
+}
