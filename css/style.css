@@ -341,20 +341,23 @@ header .tagline {
     .modal-gallery-container {
         width: 100%;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: center;  /* Centers horizontally */
+        align-items: center;      /* Centers vertically */
+        height: 100%;             /* Ensures full height */
+        overflow: hidden;         /* Prevents scrolling */
     }
 
     .gallery-item {
-        flex: 0 0 auto; /* Ensures gallery items don’t stretch */
+        flex: 0 0 auto;  /* Prevents flex items from stretching */
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: center;  /* Centers horizontally */
+        align-items: center;      /* Centers vertically */
+        width: 100%;              /* Ensures the image doesn't stretch beyond the modal container */
     }
 
     /* Adjust gallery items (images and videos) */
     .gallery-item img {
-        max-width: 50%;
+        max-width: 70%;
         max-height: 60vh; /* Lower max-height for mobile */
         object-fit: contain; /* Maintains aspect ratio */
     }
