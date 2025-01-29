@@ -385,14 +385,14 @@ header .tagline {
 }
 
 @media screen and (max-width: 600px) {
-    /* Adjust modal content for more vertical space on mobile */
+    /* Adjust modal content for more vertical space */
     .modal-content {
         width: 90%; /* Slightly smaller width for better vertical layout */
         height: 80%; /* Set height to occupy more vertical space */
         max-height: 90vh; /* Limit the height to be no taller than the screen */
         display: flex;
         flex-direction: column;
-        justify-content: space-between; /* Space the content out vertically */
+        justify-content: center; /* Center the content vertically */
         padding: 20px; /* Added padding for spacing */
     }
 
@@ -401,25 +401,19 @@ header .tagline {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 20px; /* Adds space below the gallery for arrows/buttons */
     }
 
     /* Adjust the gallery item to ensure they are vertically aligned */
     .gallery-item {
         flex: 0 0 auto; /* Keep the item as a block without stretching */
         margin: 0 auto; /* Center the gallery item */
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
-    /* Limit the height of videos to avoid overflowing on mobile */
     .gallery-item img,
     .gallery-item video {
-        max-width: 70%;
-        height: auto;
-        max-height: 30vh; /* Limit the height of media to fit better on screen */
-        object-fit: contain;
+        max-width: 100%; /* Make sure the video fits the width */
+        max-height: 60vh; /* Limit the height for the video */
+        object-fit: contain; /* Ensure the video maintains aspect ratio */
     }
 
     .modal-arrow {
@@ -428,11 +422,11 @@ header .tagline {
     }
 
     .view-more {
-        margin-top: 20px; /* Add spacing for the 'view more' button */
+        margin-top: 20px; /* Add spacing for view more button */
         font-size: 18px; /* Increase button text size for readability */
     }
 
-    /* Adjust footer content for mobile */
+    /* Footer adjustments for mobile */
     .footer-content p {
         font-size: 12px;
     }
