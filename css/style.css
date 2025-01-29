@@ -413,11 +413,12 @@ header .tagline {
         align-items: center;
     }
 
+    /* Limit the height of videos to avoid overflowing on mobile */
     .gallery-item img,
     .gallery-item video {
         max-width: 100%;
         height: auto;
-        max-height: 60vh; /* Limit the height of media to fit better on screen */
+        max-height: 50vh; /* Limit the height of media to fit better on screen */
         object-fit: contain;
     }
 
