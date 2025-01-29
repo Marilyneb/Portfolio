@@ -156,11 +156,11 @@ function closeModal() {
     document.getElementById("modal-gallery").innerHTML = "";
 
     // Stop native HTML5 videos
-    document.querySelectorAll(".portfolio-item video").forEach(video => {
-        video.pause();
-        video.currentTime = 0;
-        video.load(); // Reload the video to ensure the poster is displayed
-    });
+document.querySelectorAll(".portfolio-item video").forEach(video => {
+    video.pause();
+    video.currentTime = 0;
+    video.load(); // Reload the video to ensure the poster is displayed
+});
     // Stop and reset Vimeo iframe videos properly
     document.querySelectorAll("#modal-gallery iframe").forEach(iframe => {
         const src = iframe.src;

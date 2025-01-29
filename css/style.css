@@ -36,7 +36,7 @@ header .tagline {
     z-index: 1000;
     text-align: center;
     overflow: hidden;
-    background-color: #111;     
+    background-color: #111;
 }
 #navbar a {
     text-decoration: none;
@@ -46,7 +46,7 @@ header .tagline {
 }
 
 #navbar a:hover {
-    color: #fff; 
+    color: #fff;
 }
 
 /* Section styles */
@@ -102,8 +102,8 @@ header .tagline {
 .portfolio-item video {
     width: 100%;
     height: auto;
-    max-height: 400px; 
-    object-fit: cover; 
+    max-height: 400px;
+    object-fit: cover;
 }
 .portfolio-item h3,
 .media-item p {
@@ -111,8 +111,9 @@ header .tagline {
     font-size: 18px;
     color: #fff;
 }
- /* About me styles*/
-.about-me-section { 
+
+/* About me styles */
+.about-me-section {
     background-color: #111;
     display: flex;
     justify-content: center;
@@ -139,7 +140,7 @@ header .tagline {
     border-radius: 50%;
     object-fit: cover;
     margin-right: 30px;
-    border: 4px solid #555; 
+    border: 4px solid #555;
 }
 
 .about-details {
@@ -203,6 +204,7 @@ header .tagline {
         max-width: 100%;
     }
 }
+
 /* Modal styles */
 .modal {
     display: none;
@@ -221,7 +223,7 @@ header .tagline {
 .modal-content {
     background: #222;
     padding: 20px;
-    width: 95%; 
+    width: 95%;
     max-width: 800px;
     border-radius: 10px;
     position: relative;
@@ -236,17 +238,17 @@ header .tagline {
     align-items: center;
     position: relative;
     width: 100%;
-    overflow: hidden; 
+    overflow: hidden;
 }
 .modal-gallery {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: auto; 
+    width: auto;
     height: auto;
 }
 
 .gallery-item {
-    flex: 0 0 100%; 
+    flex: 0 0 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -254,12 +256,13 @@ header .tagline {
 
 .gallery-item img,
 .gallery-item video {
-    max-width: 100%; 
+    max-width: 100%;
     height: auto;
-    max-height: 80vh; 
+    max-height: 80vh;
     object-fit: contain;
     border-radius: 8px;
 }
+
 .modal-arrow {
     background: #444;
     color: #fff;
@@ -302,6 +305,7 @@ header .tagline {
 .view-more:hover {
     background: #666;
 }
+
 .close-modal {
     position: absolute;
     top: 10px;
@@ -321,7 +325,7 @@ header .tagline {
 
 @media screen and (max-width: 600px) {
     .gallery-item {
-        flex: 0 0 48%; 
+        flex: 0 0 100%;
     }
 
     .modal-arrow {
@@ -331,16 +335,18 @@ header .tagline {
     .modal-content {
         width: 90%;
     }
-}
-@supports not (position: sticky) {
-    header nav {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
+
+    .footer-content p {
+        font-size: 12px;
+    }
+
+    .social-icon img {
+        width: 40px;
+        height: 40px;
     }
 }
-/* footer */
+
+/* Footer */
 #footer {
     background-color: #111;
     color: #ddd;
@@ -366,7 +372,6 @@ header .tagline {
     display: inline-block;
     margin: 0 10px;
     transition: transform 0.3s ease;
-
 }
 
 .social-icon img {
@@ -381,58 +386,32 @@ header .tagline {
 
 /* Mobile Adjustments for Vimeo Video Fullscreen */
 @media screen and (max-width: 768px) {
-    /* Ensure video container allows fullscreen and is responsive */
     .gallery-item video {
-        width: 100%; /* Full width of the container */
-        height: auto;  /* Maintain aspect ratio */
-        max-height: 80vh; /* Prevent the video from exceeding screen height */
-        object-fit: contain; /* Ensure video stays within boundaries */
-        display: block; /* Remove any unwanted space around the video */
-        margin: 0 auto; /* Center the video */
-        z-index: 10; /* Ensure the video controls are on top */
+        width: 100%;
+        height: auto;
+        max-height: 80vh;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+        z-index: 10;
     }
 
-    /* Ensure iframe and video containers are not blocking the fullscreen button */
-    .gallery-item iframe, .gallery-item video {
+    .gallery-item iframe,
+    .gallery-item video {
         position: relative;
-        z-index: 10; /* Allow fullscreen button to appear above content */
+        z-index: 10;
     }
 
-    /* Make sure video controls are visible */
     .gallery-item video::-webkit-media-controls {
         display: block;
     }
-    
-    /* Optional: Adjust the video container to allow more space */
+
     .modal-gallery-container {
         padding: 10px;
     }
 
-    /* Modal layout adjustments for mobile screens */
     .modal-content {
-        width: 65%; /* Ensure the modal takes most of the phone screen */
+        width: 65%;
         padding: 10px;
-    }
-}
-
-/* Adjust Modal Layout for Smaller Screens */
-@media screen and (max-width: 600px) {
-    /* Ensure gallery items fill full width */
-    .gallery-item {
-        flex: 0 0 100%; /* Make each item full width */
-    }
-
-    /* Footer Adjustments */
-    #footer {
-        padding: 15px 5px;
-    }
-
-    .footer-content p {
-        font-size: 12px; /* Smaller footer text */
-    }
-
-    .social-icon img {
-        width: 40px; /* Smaller social icons */
-        height: 40px;
     }
 }
