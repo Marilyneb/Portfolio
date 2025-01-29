@@ -145,13 +145,16 @@ function openModal(key) {
     const viewMoreButton = document.querySelector(".view-more");
     const data = modalData[key];
 
-    // Pause all videos on the page
-    document.querySelectorAll("video").forEach(video => video.pause());
+    // Pause all videos when opening the modal
+    document.querySelectorAll("video").forEach(video => {
+        video.pause();
+        video.currentTime = 0;  // Reset video to the beginning
+    });
 
     if (data) {
         title.textContent = data.title;
         description.textContent = data.description || "";
-        gallery.innerHTML = data.gallery.map(item => `<div class="gallery-item">${item}</div>`).join(""); // This will work for iframe as well
+        gallery.innerHTML = data.gallery.map(item => `<div class="gallery-item">${item}</div>`).join("");
         viewMoreButton.style.display = data.link ? "inline-block" : "none";
         if (data.link) viewMoreButton.href = data.link;
 
@@ -162,6 +165,7 @@ function openModal(key) {
         console.error(`No data found for key: ${key}`);
     }
 }
+
 
 function closeModal() {
     const modal = document.getElementById("modal");
