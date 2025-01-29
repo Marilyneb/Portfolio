@@ -324,52 +324,54 @@ header .tagline {
 }
 
 
-/* Ensure the gallery items fit well on mobile */
-.modal-gallery-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-/* Style the modal's video and image items */
-.gallery-item img,
-.gallery-item video {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain; /* Ensure aspect ratio is preserved */
-    border-radius: 8px;
-}
-
-/* Modal styles on mobile */
 @media screen and (max-width: 600px) {
     .modal-content {
-        width: 95%;
-        max-width: 100%;
+        width: 95%; /* Ensures it doesn’t get too wide */
+        max-width: 100%; /* Prevents overflow */
         height: auto;
-        max-height: 85vh;
+        max-height: 85vh; /* Keeps within viewport */
         display: flex;
         flex-direction: column;
         align-items: center;
         overflow-y: auto;
+        overflow-x: auto;
     }
+    .modal-gallery-container {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    /* Adjust gallery for images and videos */
+    }
+    /* Adjust gallery items (videos and images) */
     .gallery-item {
-        flex: 0 0 auto;
+        flex: 0 0 auto; /* Ensures gallery items don't stretch */
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
+    /* Style adjustments for videos in modal */
+    .gallery-item img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain; /* Keeps aspect ratio */
+        border-radius: 8px;
+    }
+    .gallery-item video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain; /* Keep aspect ratio */
+    }
+
     iframe {
         width: 100% !important;
         height: auto !important;
-        aspect-ratio: 16 / 9; /* Maintain proper aspect ratio */
+        aspect-ratio: 16 / 9; /* Keeps the correct proportions */
     }
-
     .modal-arrow {
         font-size: 22px;
         padding: 16px;
@@ -378,6 +380,11 @@ header .tagline {
     .view-more {
         margin-top: 20px;
         font-size: 18px;
+    }
+
+    /* Footer adjustments for mobile */
+    .footer-content p {
+        font-size: 12px;
     }
 
     .social-icon img {
