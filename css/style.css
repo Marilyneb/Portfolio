@@ -416,7 +416,7 @@ header .tagline {
     /* Limit the height of videos to avoid overflowing on mobile */
     .gallery-item img,
     .gallery-item video {
-        max-width: 100%;
+        max-width: 70%;
         height: auto;
         max-height: 30vh; /* Limit the height of media to fit better on screen */
         object-fit: contain;
