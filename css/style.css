@@ -324,7 +324,6 @@ header .tagline {
 }
 
 /* Adjustments for Mobile */
-/* Adjustments for Mobile */
 @media screen and (max-width: 600px) {
     .modal-content {
         width: 95%; /* Ensures modal doesn’t stretch too much */
@@ -334,7 +333,7 @@ header .tagline {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center; /* Ensures the modal content is vertically centered */
+        justify-content: center; /* Centers modal content vertically */
         overflow-y: auto;
     }
 
@@ -345,6 +344,7 @@ header .tagline {
         justify-content: center;  /* Centers images horizontally */
         align-items: center;      /* Centers images vertically */
         overflow: hidden;         /* Prevents scrolling if content overflows */
+        padding: 10px;            /* Adds some space around the content */
     }
 
     .gallery-item {
@@ -352,16 +352,16 @@ header .tagline {
         justify-content: center;  /* Centers content horizontally */
         align-items: center;      /* Centers content vertically */
         width: 100%;              /* Ensures the gallery item takes up full width */
-        padding: 20px;            /* Adds padding around the image/video */
+        padding: 10px;            /* Adds padding around the image/video */
     }
 
-    /* Ensure images and videos are responsive */
+    /* Ensure images and videos are responsive and centered */
     .gallery-item img,
     .gallery-item video {
-        max-width: 90%;           /* Ensures images don't stretch too wide */
-        max-height: 70vh;         /* Keeps images within a reasonable height */
-        object-fit: contain;      /* Prevents cropping and maintains aspect ratio */
-        margin: auto;             /* Centers the image/video inside the container */
+        max-width: 100%;           /* Ensures images don't stretch too wide */
+        max-height: 70vh;          /* Keeps images within a reasonable height */
+        object-fit: contain;       /* Prevents cropping and maintains aspect ratio */
+        margin: auto;              /* Ensures the image/video is centered within its container */
     }
 
     /* Adjust for iframe elements */
