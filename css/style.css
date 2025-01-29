@@ -385,47 +385,52 @@ header .tagline {
 }
 
 @media screen and (max-width: 600px) {
-    /* Adjust modal content for more vertical space */
     .modal-content {
-        width: 90%; /* Slightly smaller width for better vertical layout */
-        height: 80%; /* Set height to occupy more vertical space */
-        max-height: 90vh; /* Limit the height to be no taller than the screen */
+        width: 90%; /* Ensures the modal content is a bit smaller on mobile */
+        height: 80%; /* Allows for vertical space */
+        max-height: 90vh; /* Limits height to 90% of viewport height */
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Center the content vertically */
-        padding: 20px; /* Added padding for spacing */
+        justify-content: center;
+        align-items: center; /* Centers the modal content */
+        padding: 20px;
     }
 
     .modal-gallery-container {
-        flex-grow: 1; /* Allow the gallery container to expand vertically */
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* Adjust gallery items (videos and images) */
+    .gallery-item {
+        flex: 0 0 auto; /* Ensures gallery items don't stretch */
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    /* Adjust the gallery item to ensure they are vertically aligned */
-    .gallery-item {
-        flex: 0 0 auto; /* Keep the item as a block without stretching */
-        margin: 0 auto; /* Center the gallery item */
-    }
-
+    /* Style adjustments for videos in modal */
     .gallery-item img,
     .gallery-item video {
-        max-width: 100%; /* Prevent the video from being too wide */
-        max-height: 80vh; /* Limit the height for the video */
-        width: auto; /* Allow the width to scale with height */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: contain; /* Ensure the video maintains aspect ratio */
+        width: 100%; /* Limit width to 100% of the container */
+        max-width: 100%; /* Prevent overflow */
+        max-height: 80vh; /* Limit video height to 80% of viewport height */
+        height: auto; /* Allow the height to scale proportionally */
+        object-fit: contain; /* Keep aspect ratio */
     }
 
     .modal-arrow {
-        font-size: 20px; /* Make arrow buttons slightly larger */
+        font-size: 20px;
         padding: 12px;
     }
 
     .view-more {
-        margin-top: 20px; /* Add spacing for view more button */
-        font-size: 18px; /* Increase button text size for readability */
+        margin-top: 20px;
+        font-size: 18px;
     }
 
     /* Footer adjustments for mobile */
