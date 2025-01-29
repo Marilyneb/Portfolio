@@ -385,33 +385,48 @@ header .tagline {
 }
 
 /* Mobile Adjustments for Vimeo Video Fullscreen */
-@media screen and (max-width: 768px) {
-    .gallery-item video {
-        width: 100%;
-        height: auto;
-        max-height: 80vh;
-        object-fit: contain;
-        display: block;
-        margin: 0 auto;
-        z-index: 10;
-    }
-
-    .gallery-item iframe,
-    .gallery-item video {
-        position: relative;
-        z-index: 10;
-    }
-
-    .gallery-item video::-webkit-media-controls {
-        display: block;
+@media screen and (max-width: 600px) {
+    /* Adjust modal content for more vertical space */
+    .modal-content {
+        width: 90%; /* Slightly smaller width for better vertical layout */
+        height: 80%; /* Set height to occupy more vertical space */
+        max-height: 90vh; /* Limit the height to be no taller than the screen */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center the content vertically */
+        padding: 20px; /* Added padding for spacing */
     }
 
     .modal-gallery-container {
-        padding: 10px;
+        flex-grow: 1; /* Allow the gallery container to expand vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .modal-content {
-        width: 65%;
-        padding: 10px;
+    /* Adjust the gallery item to ensure they are vertically aligned */
+    .gallery-item {
+        flex: 0 0 auto; /* Keep the item as a block without stretching */
+        margin: 0 auto; /* Center the gallery item */
+    }
+
+    .modal-arrow {
+        font-size: 20px; /* Make arrow buttons slightly larger */
+        padding: 12px;
+    }
+
+    .view-more {
+        margin-top: 20px; /* Add spacing for view more button */
+        font-size: 18px; /* Increase button text size for readability */
+    }
+
+    /* Footer adjustments for mobile */
+    .footer-content p {
+        font-size: 12px;
+    }
+
+    .social-icon img {
+        width: 40px;
+        height: 40px;
     }
 }
