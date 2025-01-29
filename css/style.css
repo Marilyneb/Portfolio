@@ -403,7 +403,7 @@ header .tagline {
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
+
     }
     /* Adjust gallery items (videos and images) */
     .gallery-item {
