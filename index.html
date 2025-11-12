@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q73DYZSSME"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -10,153 +10,244 @@
 
   gtag('config', 'G-Q73DYZSSME');
 </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marilyne Bassoulou</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marilyne Bassoulou — Portfolio</title>
+  <meta name="description" content="Portfolio of Marilyne Bassoulou — Graphics, Design, Simulation, and Visual Effects." />
+  <meta name="theme-color" content="#000000" />
+  <meta property="og:image" content="assets/Thumbnail1.png" />
+  <link rel="icon" href="assets/favicon.ico" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-    <header id="home">
-        <!-- Logo -->
-        <div class="logo">
-          <span class="logo-part1">Marilyne</span>
-          <span class="logo-part2">Bassoulou</span>
-        </div>
-        <!-- Tagline -->
-        <div class="tagline">
-          GRAPHICS &bull; DESIGN &bull; SIMULATION &bull; TD
-        </div>
-    </header>
-      <!-- Navigation Menu -->
-    <nav id="navbar">
-        <a href="#home">HOME</a>
-        <a href="#projects" >PROJECTS</a>
-        <a href="#sketches" >SKETCHES</a>
-        <a href="#about">ABOUT ME</a>
-    </nav>      
-    <!-- Projects Section -->
-    <section id="projects" class="portfolio-section">
-        <h2>Projects</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-item" onclick="openModal('project1')">
-                <video src="assets/TheElevatorPitch_GroupProject_2024.mov" poster="assets/Thumbnail1.png" controls></video>
-                <h3>The Elevator Pitch</h3>
-            </div>
-            <div class="portfolio-item" onclick="openModal('project2')">
-                <video src="assets/interactive_shader_editor (480p).mp4" poster="assets/Thumbnail2.png" controls></video>
-                <h3>Interactive Shader Editor</h3>
-            </div>
-            <div class="portfolio-item" onclick="openModal('project3')">
-              <video src="assets/project2 (720p).mp4" poster="assets/Thumbnail3.png"  controls></video>
-              <h3>Coffee Advertisement</h3>
-          </div>
-          <div class="portfolio-item" onclick="openModal('project4')">
-            <img src="assets/Avocadooo.jpg" alt="Avocado Render"></img>
-            <h3>Avocado RenderMan</h3>
-          </div>
-          <div class="portfolio-item"onclick="openModal('project5')">
-            <video src="assets/My Movie 4.mp4" poster="assets/Thumbnail9.png" controls></video>
-            <h3>Bouncing Ball</h3>
-          </div>
-          <div class="portfolio-item"onclick="openModal('project6')">
-            <video src="assets/project (720p).mp4" poster="assets/Thumbnail4.png" controls></video>
-            <h3>The Inn at the Edge of the World</h3>
-          </div>
-          <div class="portfolio-item" onclick="openModal('project7')">
-            <video src="assets/Houdini.mov"  poster="assets/Thumbnail10.png" controls></video>
-            <h3>Houdini Digital Asset (HDA)</h3>
-          </div>
-          <div class="portfolio-item" onclick="openModal('project8')">
-            <video src="assets/video.mp4" poster="assets/Thumbnail6.png" controls></video>
-            <h3>Asset Library</h3>
-        </div>
-          <div class="portfolio-item"onclick="openModal('project9')">
-            <video src="assets/marilyne_bassoulou_csc_343_final_project (720p).mp4" poster="assets/Thumbnail8.png"  controls></video>
-            <h3>Character Animation</h3>
-          </div>
-        </div>
-    </section>
+  <div id="progress" aria-hidden="true"></div>
 
-    <!-- Sketches Section -->
-    <section id="sketches" class="portfolio-section">
-        <h2>Sketches</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-item" onclick="openModal('sketch1')">
-                <img src="assets/marilyne-bassoulou-wine-colored.jpg" alt="Colored Wine Study">
-                <p>Colored Wine Study</p>
-            </div>
-            <div class="portfolio-item" onclick="openModal('sketch2')">
-                <img src="assets/marilyne-bassoulou-wine.jpg" alt="Wine Illustration">
-                <p>Wine Illustration</p>
-            </div>
-            <div class="portfolio-item" onclick="openModal('sketch3')">
-                <img src="assets/marilyne-bassoulou-study-project-1-1.jpg" alt="Abstract Study">
-                <p>Abstract Study</p>
-            </div>
-            <div class="portfolio-item" onclick="openModal('sketch4')">
-                <img src="assets/marilyne-bassoulou-study-project-2.jpg" alt="Black and White Study Sketch">
-                <p>Black and White Study Sketch</p>
-            </div>
-        </div>
-    </section>
+  <!-- HERO -->
+  <header id="home" class="hero-section">
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
 
-    <!-- About Me -->
-    <section id="about" class="about-me-section">
-        <h2> About Me </h2>
-        <div class="about-container">
-            <!-- Image on the left -->
-            <div class="about-image">
-                <img src="assets/default-profile-picture-grey-female-icon.svg" alt="Name" />
-            </div>
-            <!-- Details on the right -->
-            <div class="about-details">
-                <p> I am <strong>Marilyne Bassoulou</strong>, a creative and technically skilled designer with an MSc in Computer Animation and Visual Effects from Bournemouth University.</p>
-                <p> I have a background that combines computer science and design, and I’m passionate about bridging the gap between creativity and technology. I love designing visually appealing, user-friendly experiences that are both functional and beautiful. By blending coding skills with design expertise, I focus on creating seamless, innovative solutions. With experience in both design tools and coding, I’m always excited to bring new, innovative ideas to life and explore new possibilities in the design world.</p>
-        
-    
-                <h3>Contact Information</h3>
-                <ul>
-                    <li><strong>Email:</strong> marilynebassoulow@gmail.com</a></li>
-                </ul>
-    
-                <a href="assets/Marilyne Bassoulou CV.pdf" class="resume-button" download>Resume</a>
-            </div>
-        </div>
-    </section>
-    <!-- Footer Section -->
-    <footer id="footer">
-    <div class="footer-content">
-        <div class="social-links">
-            <a href="https://linkedin.com/in/marilyne-bassoulou" target="_blank" class="social-icon">
-                <img src="assets/black-linkedin-logo-15915.svg" alt="LinkedIn" />
-            </a>
-            <a href="https://github.com/Marilyneb" target="_blank" class="social-icon">
-                <img src="assets/211904_social_github_icon.svg" alt="Github" />
-            </a>
-            <a href="https://marilynebassoulou.artstation.com" target="_blank" class="social-icon">
-                <img src="assets/8666128_artstation_icon.svg" alt="Artstation" />
-            </a>
-        </div>
+    <div class="hero-overlay">
+      <h1 class="logo">Marilyne Bassoulou</h1>
+      <p class="tagline">GRAPHICS • DESIGN • SIMULATION • TD</p>
     </div>
-    </footer>
 
+    <button class="cta-down" aria-label="Scroll to Projects">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#00ffff" stroke-width="2">
+        <path d="M6 9l6 6 6-6" />
+      </svg>
+    </button>
+  </header>
 
-    <!-- Modal -->
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <button id="close-modal" class="close-modal">&times;</button> <!-- Close button -->
-          <h2 id="modal-title"></h2>
-          <p id="modal-description"></p>
-          <div class="modal-gallery-container">
-              <button class="modal-arrow modal-left-arrow" onclick="prevItem()">&#10094;</button>
-              <div class="modal-gallery" id="modal-gallery"></div>
-              <button class="modal-arrow modal-right-arrow" onclick="nextItem()">&#10095;</button>
-          </div>
-          <a class="view-more" href="#" target="_blank" rel="noopener noreferrer">Open on Github</a>
-      </div>
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="nav-link" href="#home">Home</a>
+      <a class="nav-link" href="#projects">Projects</a>
+      <a class="nav-link" href="#sketches">Sketches</a>
+      <a class="nav-link" href="#about">About</a>
+    </div>
+  </nav>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="portfolio-section">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="filter-bar">
+      <button class="filter-btn is-active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="interactive">Interactive</button>
+      <button class="filter-btn" data-filter="vfx">VFX / CG</button>
+      <button class="filter-btn" data-filter="animation">Animation</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+    </div>
+
+    <div class="portfolio-grid" data-gallery="projects">
+      <article class="card" data-category="vfx animation design">
+        <button class="media-trigger" data-type="video" data-src="assets/TheElevatorPitch_GroupProject_2024.mov" data-poster="assets/Thumbnail1.png">
+          <video preload="none" loading="lazy" poster="assets/Thumbnail1.png"></video>
+        </button>
+        <h3 class="card-title">The Elevator Pitch</h3>
+      </article>
+
+      <article class="card" data-category="interactive design vfx">
+        <button class="media-trigger" data-type="video" data-src="assets/interactive_shader_editor (480p).mp4" data-poster="assets/Thumbnail2.png">
+          <video preload="none" loading="lazy" poster="assets/Thumbnail2.png"></video>
+        </button>
+        <h3 class="card-title">Interactive Shader Editor</h3>
+      </article>
+
+      <article class="card" data-category="design vfx animation">
+        <button class="media-trigger" data-type="video" data-src="assets/project2 (720p).mp4" data-poster="assets/Thumbnail3.png">
+          <video preload="none" loading="lazy" poster="assets/Thumbnail3.png"></video>
+        </button>
+        <h3 class="card-title">Coffee Advertisement</h3>
+      </article>
+
+      <article class="card" data-category="vfx design">
+        <button class="media-trigger" data-type="image" data-src="assets/Avocadooo.jpg">
+          <img loading="lazy" src="assets/Avocadooo.jpg" alt="Avocado RenderMan" />
+        </button>
+        <h3 class="card-title">Avocado RenderMan</h3>
+      </article>
+
+      <article class="card" data-category="animation design">
+        <button class="media-trigger" data-type="video" data-src="assets/My Movie 4.mp4" data-poster="assets/Thumbnail9.png">
+          <video preload="none" loading="lazy" poster="assets/Thumbnail9.png"></video>
+        </button>
+        <h3 class="card-title">Bouncing Ball</h3>
+      </article>
+
+      <article class="card" data-category="animation vfx design">
+        <button class="media-trigger" data-type="video" data-src="assets/project (720p).mp4" data-poster="assets/Thumbnail4.png">
+          <video preload="none" loading="lazy" poster="assets/Thumbnail4.png"></video>
+        </button>
+        <h3 class="card-title">The Inn at the Edge of the World</h3>
+      </article>
+
+      <article class="card" data-category="vfx interactive design">
+        <button class="media-trigger" data-type="video" data-src="assets/Houdini.mov" data-poster="assets/Thumbnail10.png">
+          <video preload="none" loading="lazy" poster="assets/Thumbnail10.png"></video>
+        </button>
+        <h3 class="card-title">Houdini Digital Asset (HDA)</h3>
+      </article>
+
+      <article class="card" data-category="interactive design">
+        <button class="media-trigger" data-type="video" data-src="assets/video.mp4" data-poster="assets/Thumbnail6.png">
+          <video preload="none" loading="lazy" poster="assets/Thumbnail6.png"></video>
+        </button>
+        <h3 class="card-title">Asset Library</h3>
+      </article>
+
+      <article class="card" data-category="animation">
+        <button class="media-trigger" data-type="video" data-src="assets/marilyne_bassoulou_csc_343_final_project (720p).mp4" data-poster="assets/Thumbnail8.png">
+          <video preload="none" loading="lazy" poster="assets/Thumbnail8.png"></video>
+        </button>
+        <h3 class="card-title">Character Animation</h3>
+      </article>
+    </div>
+  </section>
+
+  <!-- SKETCHES -->
+<!-- SKETCHES -->
+<section id="sketches" class="portfolio-section">
+  <h2 class="section-title">Sketches</h2>
+
+  <div class="portfolio-grid" data-gallery="sketches">
+    <article class="card">
+      <button class="media-trigger" data-type="image" data-src="assets/marilyne-bassoulou-wine-colored.jpg">
+        <img loading="lazy" src="assets/marilyne-bassoulou-wine-colored.jpg" alt="Colored Wine Study" />
+      </button>
+      <p class="card-caption">Colored Wine Study</p>
+    </article>
+
+    <article class="card">
+      <button class="media-trigger" data-type="image" data-src="assets/marilyne-bassoulou-wine.jpg">
+        <img loading="lazy" src="assets/marilyne-bassoulou-wine.jpg" alt="Wine Illustration" />
+      </button>
+      <p class="card-caption">Wine Illustration</p>
+    </article>
+
+    <article class="card">
+      <button class="media-trigger" data-type="image" data-src="assets/marilyne-bassoulou-study-project-1-1.jpg">
+        <img loading="lazy" src="assets/marilyne-bassoulou-study-project-1-1.jpg" alt="Abstract Study" />
+      </button>
+      <p class="card-caption">Abstract Study</p>
+    </article>
+
+    <article class="card">
+      <button class="media-trigger" data-type="image" data-src="assets/marilyne-bassoulou-study-project-2.jpg">
+        <img loading="lazy" src="assets/marilyne-bassoulou-study-project-2.jpg" alt="Black and White Study Sketch" />
+      </button>
+      <p class="card-caption">Black and White Study Sketch</p>
+    </article>
   </div>
- 
+</section>
 
-    <script src="js/script.js"></script>
+
+  <!-- ABOUT -->
+  <section id="about" class="about-me-section">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-container">
+      <div class="about-image">
+        <img src="assets/default-profile-picture-grey-female-icon.svg" alt="Portrait of Marilyne Bassoulou" />
+        <div class="resume-actions">
+          <a href="assets/Marilyne Bassoulou CV.pdf" class="resume-button" download>Download Resume</a>
+          <button class="view-resume-btn" id="viewResumeBtn">View Resume</button>
+        </div>
+      </div>
+
+      <div class="about-details">
+        <p>
+          I’m Marilyne Bassoulou, a creative and technically
+          skilled designer with an MSc in Computer Animation and Visual Effects
+          from Bournemouth University.
+        </p>
+        <p> 
+            I have a background that combines computer science and design, and I’m passionate about bridging the gap between creativity and technology. I love designing visually appealing, user-friendly experiences that are both functional and beautiful. 
+            By blending coding skills with design expertise, I focus on creating seamless, innovative solutions. With experience in both design tools and coding, I’m always excited to bring new, innovative ideas to life and explore new possibilities in the design world.
+        </p>
+
+
+        <h3>Contact Me</h3>
+        <form id="contact-form" action="https://formspree.io/f/xpwkzevl" method="POST">
+          <label>
+            <span>Your Email</span>
+            <input type="email" name="email" required />
+          </label>
+
+          <label>
+            <span>Your Message</span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+
+          <button type="submit" class="send-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="social-links">
+      <a href="https://linkedin.com/in/marilyne-bassoulou" target="_blank" aria-label="LinkedIn"><img src="assets/black-linkedin-logo-15915.svg" alt="LinkedIn" /></a>
+      <a href="https://github.com/Marilyneb" target="_blank" aria-label="GitHub"><img src="assets/211904_social_github_icon.svg" alt="GitHub" /></a>
+      <a href="https://marilynebassoulou.artstation.com" target="_blank" aria-label="Artstation"><img src="assets/8666128_artstation_icon.svg" alt="Artstation" /></a>
+    </div>
+  </footer>
+
+  <!-- Media Modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close">×</button>
+      
+      <div class="modal-info">
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+        <a id="modal-link" href="#" target="_blank">View on GitHub ↗</a>
+      </div>
+    
+      <div id="modal-stage"></div>
+    
+      <div class="modal-controls">
+        <button class="modal-prev">‹</button>
+        <button class="modal-next">›</button>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="js/script.js" defer  ></script>
 </body>
 </html>
