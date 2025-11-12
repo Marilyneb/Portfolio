@@ -193,3 +193,10 @@ document.getElementById("close-modal").addEventListener("click", closeModal);
 window.addEventListener("click", event => {
     if (event.target === document.getElementById("modal")) closeModal();
 });
+document.querySelector(".resume-button").addEventListener("click", () => {
+    gtag('event', 'download_resume', {
+      'event_category': 'Engagement',
+      'event_label': 'Resume Button'
+    });
+  });
+  
