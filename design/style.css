@@ -37,3 +37,7 @@
 .imetric .video-grid{grid-template-columns:minmax(0,340px);margin-inline:auto;justify-content:center}
 .slide-controls button:disabled{opacity:.2}
 @media(max-width:650px){.home .independent-grid .tile img{aspect-ratio:auto;max-height:440px}.home .motion-banner{margin-bottom:24px}.hero-actions{gap:12px}.home #about .split{gap:28px}}
+
+/* Proposed identity: seamless neutral presentation for original logo artwork */
+#concept .gallery.logos button{background:#fff;border:0;box-shadow:none}
+#concept .gallery.logos img{background:transparent;mix-blend-mode:multiply}
