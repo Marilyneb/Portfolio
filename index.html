@@ -1,250 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q73DYZSSME"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-Q73DYZSSME');
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Marilyne Bassoulou — Portfolio</title>
-  <meta name="description" content="Portfolio of Marilyne Bassoulou — Graphics, Design, Simulation, and Visual Effects." />
-  <meta name="theme-color" content="#000000" />
-  <meta property="og:image" content="assets/Thumbnail1.png" />
-  <link rel="icon" href="assets/favicon.ico" />
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
-
-  <!-- Icons -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-
-<body>
-  <div id="progress" aria-hidden="true"></div>
-
-  <!-- HERO -->
-  <header id="home" class="hero-section">
-    <canvas id="particle-canvas" aria-hidden="true"></canvas>
-
-    <div class="hero-overlay">
-      <p class="eyebrow">MARILYNE BASSOULOU / SELECTED WORK</p><h1 class="logo">3D, Animation &amp; VFX.</h1>
-      <p class="tagline">Computer graphics, visual storytelling and technical art.</p>
-    </div>
-
-    <button class="cta-down" aria-label="Scroll to Projects">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#00ffff" stroke-width="2">
-        <path d="M6 9l6 6 6-6" />
-      </svg>
-    </button>
-  </header>
-
-  <!-- NAV -->
-  <nav id="navbar">
-    <div class="nav-inner">
-      <a class="nav-link brand-mark" href="#home">MB / VFX</a>
-      <a class="nav-link" href="#projects">Projects</a>
-      <a class="nav-link" href="#sketches">Sketches</a>
-      <a class="nav-link" href="#about">About</a><a class="nav-link" href="/design/">Graphic design ↗</a>
-    </div>
-  </nav>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="portfolio-section">
-    <p class="eyebrow">01 / SELECTED WORK</p><h2 class="section-title">Projects.</h2>
-
-    <div class="filter-bar">
-      <button class="filter-btn is-active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="interactive">Interactive</button>
-      <button class="filter-btn" data-filter="vfx">VFX / CG</button>
-      <button class="filter-btn" data-filter="animation">Animation</button>
-      <button class="filter-btn" data-filter="design">Design</button>
-    </div>
-
-    <div class="portfolio-grid" data-gallery="projects">
-      <article class="card" data-category="vfx animation design">
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>3D, Animation & VFX | Marilyne Bassoulou</title><link href="design/style.css" rel="stylesheet"/><meta content="Marilyne Bassoulou — selected 3D, animation, visual effects and technical art." name="description"/><meta content="3D, Animation & VFX | Marilyne Bassoulou" property="og:title"/><meta content="Marilyne Bassoulou — selected 3D, animation, visual effects and technical art." property="og:description"/><meta content="website" property="og:type"/><meta content="https://marilynebassoulou.org/assets/Thumbnail1.png" property="og:image"/><link href="design/assets/icon.svg" rel="icon" type="image/svg+xml"/><style>.vfx-grid .media-trigger{display:block;width:100%;padding:0;border:0;background:#1c1c1c;cursor:pointer;aspect-ratio:16/9;overflow:hidden}.vfx-grid .media-trigger img,.vfx-grid .media-trigger video{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:16/9}.vfx-grid .tile{min-width:0}.vfx-grid .info{align-items:flex-start}#vfx-viewer{background:#171717;color:#f5f3ef;border:1px solid #555;padding:24px;width:min(1000px,94vw);max-height:94vh;overflow:auto}#vfx-viewer::backdrop{background:#000c}#vfx-stage img,#vfx-stage video{display:block;max-width:100%;max-height:65vh;margin:16px auto 0}.vfx-controls{display:flex;gap:12px;justify-content:flex-end}.vfx-controls button{background:transparent;color:inherit;border:1px solid #666;padding:8px 14px;cursor:pointer}#vfx-link[hidden]{display:none}</style></head><body class="home index"><a class="skip-link" href="#main-content">Skip to content</a><header><a class="mark" href="index.html">MB / VFX</a><nav><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a><a href="/design/">Graphic design ↗</a></nav></header><main id="main-content"><div class="hero"><small>MARILYNE BASSOULOU / SELECTED WORK</small><h1>3D, Animation &amp; VFX.</h1><div class="hero-bottom"><p class="lead">Computer graphics, visual storytelling and technical art.</p><div class="hero-actions"><a class="cta" href="#work">Explore work ↓</a><a class="cv-link" href="design/assets/cv.pdf" target="_blank" rel="noopener">View CV ↗</a></div></div></div><section id="work"><small>01 / Featured projects</small><h2>Selected work</h2><div class="grid featured vfx-grid"><article class="card tile" data-category="vfx animation design">
         <button class="media-trigger" data-type="video" data-src="assets/TheElevatorPitch_GroupProject_2024.mov" data-poster="assets/Thumbnail1.png">
           <video preload="none" loading="lazy" poster="assets/Thumbnail1.png"></video>
         </button>
-        <h3 class="card-title">The Elevator Pitch</h3>
-      </article>
-
-      <article class="card" data-category="interactive design vfx">
+        <div class="info"><div><h3 class="card-title">The Elevator Pitch</h3><small>Group short film · Lighting & compositing</small></div><span>↗</span></div>
+      </article><article class="card tile" data-category="interactive design vfx">
         <button class="media-trigger" data-type="video" data-src="assets/interactive_shader_editor (480p).mp4" data-poster="assets/Thumbnail2.png">
           <video preload="none" loading="lazy" poster="assets/Thumbnail2.png"></video>
         </button>
-        <h3 class="card-title">Interactive Shader Editor</h3>
-      </article>
-
-      <article class="card" data-category="design vfx animation">
+        <div class="info"><div><h3 class="card-title">Interactive Shader Editor</h3><small>Real-time shaders · Technical art</small></div><span>↗</span></div>
+      </article></div></section><section><small>02 / Additional projects</small><h2>Creative &amp; technical explorations.</h2><div class="grid three vfx-grid"><article class="card tile" data-category="design vfx animation">
         <button class="media-trigger" data-type="video" data-src="assets/project2 (720p).mp4" data-poster="assets/Thumbnail3.png">
           <video preload="none" loading="lazy" poster="assets/Thumbnail3.png"></video>
         </button>
-        <h3 class="card-title">Coffee Advertisement</h3>
-      </article>
-
-      <article class="card" data-category="vfx design">
-        <button class="media-trigger" data-type="image" data-src="assets/Avocadooo.jpg">
-          <img loading="lazy" src="assets/Avocadooo.jpg" alt="Avocado RenderMan" />
-        </button>
-        <h3 class="card-title">Avocado RenderMan</h3>
-      </article>
-
-      <article class="card" data-category="animation design">
-        <button class="media-trigger" data-type="video" data-src="assets/My Movie 4.mp4" data-poster="assets/Thumbnail9.png">
-          <video preload="none" loading="lazy" poster="assets/Thumbnail9.png"></video>
-        </button>
-        <h3 class="card-title">Bouncing Ball</h3>
-      </article>
-
-      <article class="card" data-category="animation vfx design">
+        <div class="info"><div><h3 class="card-title">Coffee Advertisement</h3><small>CG advertising · Motion</small></div><span>↗</span></div>
+      </article><article class="card tile" data-category="animation vfx design">
         <button class="media-trigger" data-type="video" data-src="assets/project (720p).mp4" data-poster="assets/Thumbnail4.png">
           <video preload="none" loading="lazy" poster="assets/Thumbnail4.png"></video>
         </button>
-        <h3 class="card-title">The Inn at the Edge of the World</h3>
-      </article>
-
-      <article class="card" data-category="vfx interactive design">
+        <div class="info"><div><h3 class="card-title">The Inn at the Edge of the World</h3><small>Short film · Visual storytelling</small></div><span>↗</span></div>
+      </article><article class="card tile" data-category="vfx interactive design">
         <button class="media-trigger" data-type="video" data-src="assets/Houdini.mov" data-poster="assets/Thumbnail10.png">
           <video preload="none" loading="lazy" poster="assets/Thumbnail10.png"></video>
         </button>
-        <h3 class="card-title">Houdini Digital Asset (HDA)</h3>
-      </article>
-
-      <article class="card" data-category="interactive design">
+        <div class="info"><div><h3 class="card-title">Houdini Digital Asset (HDA)</h3><small>Procedural modelling</small></div><span>↗</span></div>
+      </article><article class="card tile" data-category="vfx design">
+        <button class="media-trigger" data-type="image" data-src="assets/Avocadooo.jpg">
+          <img loading="lazy" src="assets/Avocadooo.jpg" alt="Avocado RenderMan" />
+        </button>
+        <div class="info"><div><h3 class="card-title">Avocado RenderMan</h3><small>Lighting · Shading</small></div><span>↗</span></div>
+      </article><article class="card tile" data-category="interactive design">
         <button class="media-trigger" data-type="video" data-src="assets/video.mp4" data-poster="assets/Thumbnail6.png">
           <video preload="none" loading="lazy" poster="assets/Thumbnail6.png"></video>
         </button>
-        <h3 class="card-title">Asset Library</h3>
-      </article>
-
-      <article class="card" data-category="animation">
+        <div class="info"><div><h3 class="card-title">Asset Library</h3><small>Pipeline tool · Asset management</small></div><span>↗</span></div>
+      </article><article class="card tile" data-category="animation">
         <button class="media-trigger" data-type="video" data-src="assets/marilyne_bassoulou_csc_343_final_project (720p).mp4" data-poster="assets/Thumbnail8.png">
           <video preload="none" loading="lazy" poster="assets/Thumbnail8.png"></video>
         </button>
-        <h3 class="card-title">Character Animation</h3>
-      </article>
-    </div>
-  </section>
-
-  <!-- SKETCHES -->
-<!-- SKETCHES -->
-<section id="sketches" class="portfolio-section">
-  <p class="eyebrow">02 / ADDITIONAL PRACTICE</p><h2 class="section-title">Visual studies.</h2>
-
-  <div class="portfolio-grid" data-gallery="sketches">
-    <article class="card">
+        <div class="info"><div><h3 class="card-title">Character Animation</h3><small>Character performance</small></div><span>↗</span></div>
+      </article><article class="card tile" data-category="animation design">
+        <button class="media-trigger" data-type="video" data-src="assets/My Movie 4.mp4" data-poster="assets/Thumbnail9.png">
+          <video preload="none" loading="lazy" poster="assets/Thumbnail9.png"></video>
+        </button>
+        <div class="info"><div><h3 class="card-title">Bouncing Ball</h3><small>Animation study</small></div><span>↗</span></div>
+      </article></div></section><section><small>03 / Visual studies</small><h2>Sketches.</h2><div class="grid three vfx-grid"><article class="card tile">
       <button class="media-trigger" data-type="image" data-src="assets/marilyne-bassoulou-wine-colored.jpg">
         <img loading="lazy" src="assets/marilyne-bassoulou-wine-colored.jpg" alt="Colored Wine Study" />
       </button>
-      <p class="card-caption">Colored Wine Study</p>
-    </article>
-
-    <article class="card">
+      <div class="info"><h3 class="card-caption">Colored Wine Study</h3><span>↗</span></div>
+    </article><article class="card tile">
       <button class="media-trigger" data-type="image" data-src="assets/marilyne-bassoulou-wine.jpg">
         <img loading="lazy" src="assets/marilyne-bassoulou-wine.jpg" alt="Wine Illustration" />
       </button>
-      <p class="card-caption">Wine Illustration</p>
-    </article>
-
-    <article class="card">
+      <div class="info"><h3 class="card-caption">Wine Illustration</h3><span>↗</span></div>
+    </article><article class="card tile">
       <button class="media-trigger" data-type="image" data-src="assets/marilyne-bassoulou-study-project-1-1.jpg">
         <img loading="lazy" src="assets/marilyne-bassoulou-study-project-1-1.jpg" alt="Abstract Study" />
       </button>
-      <p class="card-caption">Abstract Study</p>
-    </article>
-
-    <article class="card">
+      <div class="info"><h3 class="card-caption">Abstract Study</h3><span>↗</span></div>
+    </article><article class="card tile">
       <button class="media-trigger" data-type="image" data-src="assets/marilyne-bassoulou-study-project-2.jpg">
         <img loading="lazy" src="assets/marilyne-bassoulou-study-project-2.jpg" alt="Black and White Study Sketch" />
       </button>
-      <p class="card-caption">Black and White Study Sketch</p>
-    </article>
-  </div>
-</section>
-
-
-  <!-- ABOUT -->
-  <section id="about" class="about-me-section">
-    <p class="eyebrow">03 / ABOUT</p><h2 class="section-title">About me.</h2>
-    <div class="about-container">
-      <div class="about-image">
-        <div class="about-specialties"><h3>Creative &amp; technical practice</h3><p>3D modelling · Lighting · Compositing · Animation · Procedural tools</p></div>
-        <div class="resume-actions">
-          <a href="assets/Marilyne Bassoulou CV.pdf" class="resume-button" download>Download Resume</a>
-          <button class="view-resume-btn" id="viewResumeBtn">View Resume</button>
-        </div>
-      </div>
-
-      <div class="about-details">
-        <p>
-          I’m Marilyne Bassoulou, a creative and technically
-          skilled designer with an MSc in Computer Animation and Visual Effects
-          from Bournemouth University.
-        </p>
-        <p>My background in computer science and visual effects informs a practice that combines visual storytelling with technical problem-solving. Explore my <a class="cross-link" href="/design/">graphic design portfolio ↗</a> for branding, print and digital campaigns.</p>
-
-
-        <h3>Let’s work together.</h3><p><a class="cross-link" href="mailto:marilynebassoulou@gmail.com">marilynebassoulou@gmail.com ↗</a></p>
-        <form id="contact-form" action="https://formspree.io/f/xpwkzevl" method="POST">
-          <label>
-            <span>Your Email</span>
-            <input type="email" name="email" required />
-          </label>
-
-          <label>
-            <span>Your Message</span>
-            <textarea name="message" rows="4" required></textarea>
-          </label>
-
-          <button type="submit" class="send-btn">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer id="footer">
-    <div class="social-links">
-      <a href="https://linkedin.com/in/marilyne-bassoulou" target="_blank" aria-label="LinkedIn"><img src="assets/black-linkedin-logo-15915.svg" alt="LinkedIn" /></a>
-      <a href="https://github.com/Marilyneb" target="_blank" aria-label="GitHub"><img src="assets/211904_social_github_icon.svg" alt="GitHub" /></a>
-      <a href="https://marilynebassoulou.artstation.com" target="_blank" aria-label="Artstation"><img src="assets/8666128_artstation_icon.svg" alt="Artstation" /></a>
-    </div>
-  </footer>
-
-  <!-- Media Modal -->
-  <div id="modal" class="modal" aria-hidden="true">
-    <div class="modal-backdrop"></div>
-    <div class="modal-content">
-      <button class="modal-close">×</button>
-      
-      <div class="modal-info">
-        <h3 id="modal-title"></h3>
-        <p id="modal-description"></p>
-        <a id="modal-link" href="#" target="_blank">View on GitHub ↗</a>
-      </div>
-    
-      <div id="modal-stage"></div>
-    
-      <div class="modal-controls">
-        <button class="modal-prev">‹</button>
-        <button class="modal-next">›</button>
-      </div>
-    </div>
-    
-  </div>
-
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="js/script.js" defer  ></script>
-</body>
-</html>
+      <div class="info"><h3 class="card-caption">Black and White Study Sketch</h3><span>↗</span></div>
+    </article></div></section><section class="motion-banner"><small>04 / Additional practice</small><h2>Graphic design.</h2><p>Brand applications, print, digital campaigns and motion design.</p><a href="/design/">Explore my graphic design portfolio ↗</a></section><section id="about"><small>05 / About</small><h2>About me</h2><div class="split"><div><p class="lead">My practice combines computer graphics, animation and visual effects with a background in computer science. I explore visual storytelling through lighting, compositing, 3D modelling and technical tools.</p><div class="skill-tags"><span>Maya</span><span>Houdini</span><span>Nuke</span><span>RenderMan</span><span>Blender</span></div></div><div><h3>Experience</h3><p>Lead Designer (part-time), iMetric Digital<br/><small>Jan 2026 – Present</small></p><p>3D Artist &amp; Animator, Poultec<br/><small>Jul 2025 – Jan 2026</small></p><p>Freelancer<br/><small>Oct 2024 – Jun 2025</small></p><h3>Education</h3><p>MSc Computer Animation &amp; Visual Effects<br/>Bournemouth University</p><p>BSc Computer Science – Computer Graphics &amp; Animation<br/>Notre Dame University – Louaize</p></div></div></section><section id="contact"><small>06 / Contact</small><h2>Let’s work together.</h2><p><a href="mailto:marilynebassoulou@gmail.com">marilynebassoulou@gmail.com ↗</a></p><a href="https://www.linkedin.com/in/marilyne-bassoulou/">LinkedIn ↗</a><p><a href="design/assets/cv.pdf" rel="noopener" target="_blank">View CV ↗</a></p><p><a href="https://github.com/Marilyneb">GitHub ↗</a> · <a href="https://marilynebassoulou.artstation.com">ArtStation ↗</a></p></section></main><footer><small>MARILYNE BASSOULOU / 3D & VFX</small><p><a href="index.html#work">← All work</a></p></footer><dialog id="vfx-viewer" aria-label="Project viewer"><div class="vfx-controls"><button id="vfx-prev">←</button><button id="vfx-next">→</button><button id="vfx-close">Close ×</button></div><h3 id="vfx-title"></h3><p id="vfx-desc"></p><a id="vfx-link" target="_blank" rel="noopener">View on GitHub ↗</a><div id="vfx-stage"></div></dialog><script>const modalDescriptions = {
+    "The Elevator Pitch": {
+      desc: "A collaborative short film project focused on delivering a powerful and concise narrative within a limited time frame. It explores storytelling, teamwork, and visual communication.",
+      link: ""
+    },
+    "Interactive Shader Editor": {
+      desc: "An interactive tool for designing and testing shaders in real-time, built to make complex shader concepts intuitive and accessible.",
+      link: "https://github.com/Marilyneb/Shader-Editor-MSc-Project"
+    },
+    "Coffee Advertisement": {
+      desc: "A cinematic coffee ad emphasizing motion design, texture, and visual storytelling.",
+      link: ""
+    },
+    "Avocado RenderMan": {
+      desc: "A RenderMan lighting and shading project featuring a photorealistic avocado, demonstrating OSL and RIB integration.",
+      link: "https://github.com/Marilyneb/Renderman-Project"
+    },
+    "Bouncing Ball": {
+      desc: "A physics-based animation inspired by M.C. Escher’s impossible staircase, blending realism with illusion.",
+      link: ""
+    },
+    "The Inn at the Edge of the World": {
+      desc: "A short film adaptation from a script, created in collaboration to explore mood, lighting, and character emotion.",
+      link: ""
+    },
+    "Houdini Digital Asset (HDA)": {
+      desc: "A procedural garden generator built as a Houdini Digital Asset, showcasing parametric design and asset reusability.",
+      link: ""
+    },
+    "Asset Library": {
+      desc: "A web-based 3D asset manager that allows users to upload, tag, and organize models in a central library.",
+      link: "https://github.com/NCCA/msccavepipelineandtdproject24-Marilyneb/tree/main"
+    },
+    "Character Animation": {
+      desc: "A fully rigged and animated character scene focusing on expressive motion and personality.",
+      link: ""
+    }
+  };
+const d=document.querySelector('#vfx-viewer'), ts=[...document.querySelectorAll('.media-trigger')];let n=0;function show(i){n=(i+ts.length)%ts.length;const t=ts[n], title=t.closest('article').querySelector('h3').textContent, info=modalDescriptions[title];document.querySelector('#vfx-title').textContent=title;document.querySelector('#vfx-desc').textContent=info?.desc||'';const l=document.querySelector('#vfx-link');l.hidden=!info?.link;l.href=info?.link||'#';const m=document.createElement(t.dataset.type==='video'?'video':'img');m.src=t.dataset.src;if(m.tagName==='VIDEO'){m.controls=true;m.playsInline=true;m.poster=t.dataset.poster||'';}else m.alt=title;document.querySelector('#vfx-stage').replaceChildren(m);if(!d.open)d.showModal();}ts.forEach((t,i)=>{t.setAttribute('aria-label','View '+t.closest('article').querySelector('h3').textContent);t.onclick=()=>show(i)});document.querySelector('#vfx-prev').onclick=()=>show(n-1);document.querySelector('#vfx-next').onclick=()=>show(n+1);document.querySelector('#vfx-close').onclick=()=>d.close();d.addEventListener('close',()=>document.querySelector('#vfx-stage').replaceChildren());d.addEventListener('keydown',e=>{if(e.target.tagName==='VIDEO')return;if(e.key==='ArrowLeft')show(n-1);if(e.key==='ArrowRight')show(n+1)});</script></body></html>
